@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.maasdianto.com/certification"
+	xmlns:certification="http://www.maasdianto.com/certification"
+	elementFormDefault="qualified">
+
+	<element name="getFarmCertificationRequest">
+		<complexType>
+			<sequence>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="getFarmCertificationResponse">
+		<complexType>
+			<sequence>
+				<element name="FarmCertification" type="certification:FarmCertification" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="getFarmCertificationByStatusRequest">
+		<complexType>
+			<sequence>
+				<element name="status" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="getFarmCertificationByStatusResponse">
+		<complexType>
+			<sequence>
+				<element name="FarmCertification" type="certification:FarmCertification" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="FarmCertification">
+		<all>
+			<element name="id" type="int" />
+			<element name="startDate" type="date" />
+			<element name="endDate" type="date" />
+			<element name="status" type="string" />
+		</all>
+	</complexType>
+
+</schema>

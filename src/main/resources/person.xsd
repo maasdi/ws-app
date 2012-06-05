@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.maasdianto.com/person" 
+		xmlns:person="http://www.maasdianto.com/person" 
+		elementFormDefault="qualified">
+		
+		<element name="getPersonRequest">
+			<complexType>
+				<sequence>
+					<element name="id" type="int" />
+				</sequence>
+			</complexType>
+		</element>
+		
+		<element name="getPersonResponse">
+			<complexType>
+				<sequence>
+					<element name="Person" type="person:Person" />
+				</sequence>
+			</complexType>
+		</element>
+		
+		<element name="getAllPersonRequest">
+			<complexType>
+				<sequence>
+				</sequence>
+			</complexType>
+		</element>
+		
+		<element name="getAllPersonResponse">
+			<complexType>
+				<sequence>
+					<element name="Person" type="person:Person" maxOccurs="unbounded" />
+				</sequence>
+			</complexType>
+		</element>
+		
+		<complexType name="Person">
+			<all>
+				<element name="id" type="int" />
+				<element name="firstName" type="string" />
+				<element name="lastName" type="string" />
+			</all>
+		</complexType>
+		
+</schema>
