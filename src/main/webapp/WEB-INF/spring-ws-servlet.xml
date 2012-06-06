@@ -12,17 +12,17 @@
 
 	<sws:dynamic-wsdl id="Person" portTypeName="Person"
 		locationUri="/service/">
-		<sws:xsd location="/WEB-INF/classes/person.xsd" />
+		<sws:xsd location="classpath:person.xsd" />
 	</sws:dynamic-wsdl>
 
 	<sws:dynamic-wsdl id="FarmCertification" portTypeName="FarmCertification"
 		locationUri="/service/">
-		<sws:xsd location="/WEB-INF/classes/farmcertification.xsd" />
+		<sws:xsd location="classpath:farmcertification.xsd" />
 	</sws:dynamic-wsdl>
 
 	<sws:dynamic-wsdl id="Attachment" portTypeName="Attachment"
 		locationUri="/service/">
-		<sws:xsd location="/WEB-INF/classes/attachment.xsd" />
+		<sws:xsd location="classpath:attachment.xsd" />
 	</sws:dynamic-wsdl>
 
 	<bean id="annotationExceptionResolver"
