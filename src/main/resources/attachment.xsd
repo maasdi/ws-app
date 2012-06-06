@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.maasdianto.com/attachment"
+	xmlns:attachment="http://www.maasdianto.com/attachment"
+	xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+	elementFormDefault="qualified">
+	
+	<element name="loadPdfRequest" type="string" />
+	
+	<element name="loadPdfResponse" type="attachment:Pdf" />
+	
+	<element name="sendPdfRequest" type="attachment:Pdf" />
+	
+	<element name="sendPdfResponse" type="string" />
+	
+	<complexType name="Pdf">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="file" type="base64Binary" xmime:expectedContentTypes="application/pdf" />
+		</sequence>
+	</complexType>
+
+</schema>
