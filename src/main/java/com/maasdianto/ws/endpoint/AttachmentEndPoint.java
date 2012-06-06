@@ -26,11 +26,11 @@ public class AttachmentEndPoint {
 		String pdfName = requestElemet.getValue();
 		// instance Pdf for response
 		Pdf response = new Pdf();
-		response.setName(pdfName);
 		File file = new File(System.getProperty("user.home") +"/"+ pdfName);
 		if(!file.exists()){
-			throw new FileException("File with name "+ pdfName +" not exist.");
+			throw new FileException("File "+ pdfName +" is not exist");
 		}
+		response.setName(file.getName());
 		DataSource dataSource = new FileDataSource(file);
 		response.setFile(new DataHandler(dataSource));
 		

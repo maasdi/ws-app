@@ -43,13 +43,11 @@
 	</bean>
 
 	<sws:interceptors>
-
 		<bean name="wsSecurityInterceptor"
 			class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor">
 			<property name="validationActions" value="UsernameToken" />
 			<property name="validationCallbackHandler" ref="callbackHandler" />
 		</bean>
-
 	</sws:interceptors>
 
 	<bean id="callbackHandler"
@@ -61,7 +59,7 @@
 		</property>
 	</bean>
 
-	<!-- Generic MarshallingMethodEndEndpointAdapter for handle Endpoint with MTOM enabled -->
+	<!-- handle Endpoint with MTOM enabled -->
 	<bean
 		class="org.springframework.ws.server.endpoint.adapter.GenericMarshallingMethodEndpointAdapter">
 		<constructor-arg ref="marshaller" />
