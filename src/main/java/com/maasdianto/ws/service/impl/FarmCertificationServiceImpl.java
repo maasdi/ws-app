@@ -26,7 +26,7 @@ public class FarmCertificationServiceImpl implements FarmCertificationService {
 		List<FarmCertification> certifications = new ArrayList<FarmCertification>();
 		for (int i = 1; i <= 5; i++) {
 			FarmCertification farmCertification = new FarmCertification();
-			farmCertification.setId(1);
+			farmCertification.setId(i);
 			GregorianCalendar calendar = new GregorianCalendar();
 			XMLGregorianCalendar startDate;
 			XMLGregorianCalendar endDate;
@@ -34,7 +34,7 @@ public class FarmCertificationServiceImpl implements FarmCertificationService {
 				startDate = DatatypeFactory.newInstance()
 						.newXMLGregorianCalendar(calendar);
 				farmCertification.setStartDate(startDate);
-				calendar.add(GregorianCalendar.MONTH, 3);
+				calendar.add(GregorianCalendar.MONTH, 3 + i);
 				endDate = DatatypeFactory.newInstance()
 						.newXMLGregorianCalendar(calendar);
 				farmCertification.setEndDate(endDate);
