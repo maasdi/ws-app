@@ -11,6 +11,7 @@ Fitur
 Run
 ---
 Untuk menjalankan project ini :
+
 1. Clone atau download manual project ini
 2. Masuk ke top level folder yang ditandai dengan ada file pom.xml
 3. Jalankan mvn jetty:run
